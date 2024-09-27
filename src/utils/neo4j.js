@@ -1,107 +1,111 @@
 const request = require('request');
+const global = require('./global');
+const disabled = true;
 
-let neo4j_auth;
-
-try {
-	neo4j_auth = require('../../../tokens/owo-neo4j.json');
-} catch (err) {
-	console.error("'../tokens/owo-neo4j.json' not found. Skipping neo4j logging");
-}
-
-neo4j_auth = null;
-
-exports.give = function(msg, receiver, amount) {
-	if (!neo4j_auth) return;
+exports.give = function (msg, receiver, amount) {
+	if (disabled) return;
 	const info = {
 		senderId: msg.author.id,
-		senderName: `${msg.author.username}#${msg.author.discriminator}`,
+		senderName: global.getUniqueName(msg.author),
 		receiverId: receiver.id,
-		receiverName: `${receiver.username}#${receiver.discriminator}`,
+		receiverName: global.getUniqueName(receiver),
 		serverId: msg.channel.guild.id,
 		serverName: msg.channel.guild.name,
 		channelId: msg.channel.id,
 		channelName: msg.channel.name,
 		transactionAmount: amount,
 		transactionTime: Date.now(),
-		password: neo4j_auth.password
-	}
-	request({
-		method:'POST',
-		uri:`${neo4j_auth.url}/give`,
-		json:true,
-		body: info,
-	},(error,res,body)=>{
-		if(error) console.error(error);
-	});
-}
+		password: process.env.NEO4J_PASS,
+	};
+	request(
+		{
+			method: 'POST',
+			uri: `${process.env.NEO4J_HOST}/give`,
+			json: true,
+			body: info,
+		},
+		(error) => {
+			if (error) console.error(error);
+		}
+	);
+};
 
-exports.battle = function(msg, sender, receiver, amount) {
-	if (!neo4j_auth) return;
+exports.battle = function (msg, sender, receiver, amount) {
+	if (disabled) return;
 	const info = {
 		senderId: sender.id,
-		senderName: `${sender.username}#${sender.discriminator}`,
+		senderName: global.getUniqueName(sender),
 		receiverId: receiver.id,
-		receiverName: `${receiver.username}#${receiver.discriminator}`,
+		receiverName: global.getUniqueName(receiver),
 		serverId: msg.channel.guild.id,
 		serverName: msg.channel.guild.name,
 		channelId: msg.channel.id,
 		channelName: msg.channel.name,
 		transactionAmount: amount,
 		transactionTime: Date.now(),
-		password: neo4j_auth.password
-	}
-	request({
-		method:'POST',
-		uri:`${neo4j_auth.url}/battle`,
-		json:true,
-		body: info,
-	},(error,res,body)=>{
-		if(error) console.error(error);
-	});
-}
+		password: process.env.NEO4J_PASS,
+	};
+	request(
+		{
+			method: 'POST',
+			uri: `${process.env.NEO4J_HOST}/battle`,
+			json: true,
+			body: info,
+		},
+		(error) => {
+			if (error) console.error(error);
+		}
+	);
+};
 
-exports.drop = function(msg, amount) {
-	if (!neo4j_auth) return;
+exports.drop = function (msg, amount) {
+	if (disabled) return;
 	const info = {
 		senderId: msg.author.id,
-		senderName: `${msg.author.username}#${msg.author.discriminator}`,
+		senderName: global.getUniqueName(msg.author),
 		serverId: msg.channel.guild.id,
 		serverName: msg.channel.guild.name,
 		channelId: msg.channel.id,
 		channelName: msg.channel.name,
 		transactionAmount: amount,
 		transactionTime: Date.now(),
-		password: neo4j_auth.password
-	}
-	request({
-		method:'POST',
-		uri:`${neo4j_auth.url}/drop`,
-		json:true,
-		body: info,
-	},(error,res,body)=>{
-		if(error) console.error(error);
-	});
-}
+		password: process.env.NEO4J_PASS,
+	};
+	request(
+		{
+			method: 'POST',
+			uri: `${process.env.NEO4J_HOST}/drop`,
+			json: true,
+			body: info,
+		},
+		(error) => {
+			if (error) console.error(error);
+		}
+	);
+};
 
-exports.pickup = function(msg, amount) {
-	if (!neo4j_auth) return;
+exports.pickup = function (msg, amount) {
+	if (disabled) return;
 	const info = {
 		senderId: msg.author.id,
-		senderName: `${msg.author.username}#${msg.author.discriminator}`,
+		senderName: global.getUniqueName(msg.author),
 		serverId: msg.channel.guild.id,
 		serverName: msg.channel.guild.name,
 		channelId: msg.channel.id,
 		channelName: msg.channel.name,
 		transactionAmount: amount,
 		transactionTime: Date.now(),
-		password: neo4j_auth.password
-	}
-	request({
-		method:'POST',
-		uri:`${neo4j_auth.url}/pickup`,
-		json:true,
-		body: info,
-	},(error,res,body)=>{
-		if(error) console.error(error);
-	});
-}
+		password: process.env.NEO4J_PASS,
+	};
+	request(
+		{
+			method: 'POST',
+			uri: `${process.env.NEO4J_HOST}/pickup`,
+			json: true,
+			body: info,
+		},
+		(error) => {
+			if (error) console.error(error);
+		}
+	);
+};

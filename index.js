@@ -3,65 +3,70 @@
  * Copyright (C) 2019 Christopher Thai
  * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
  * For more information, see README.md and LICENSE
-  */
-require('dotenv').config()
+ */
+require('dotenv').config();
+if (!process.env.BOT_TOKEN) {
+	console.error('Bot token not found in ~/.env file. Checking secret file instead...');
+	require('dotenv').config({ path: './secret/env' });
+	if (!process.env.BOT_TOKEN) {
+		console.error('No bot token found. Please edit ./secret/env file and add your token');
+		return;
+	}
+}
 
 // Config file
 const config = require('./src/data/config.json');
 
 // Grab tokens and secret files
 const debug = config.debug;
-if(!debug) var tracer = require('dd-trace').init();
+if (!debug) require('dd-trace').init();
 
-if(debug) var auth = require('../tokens/scuttester-auth.json');
-else var auth = require('../tokens/owo-auth.json');
-
+const rateLimitUtil = require('./utils/rateLimitUtil.js');
 const request = require('./utils/request.js');
 // Eris-Sharder
 const Sharder = require('eris-sharder').Master;
-var result,shards,firstShardID,lastShardID;
+var result, shards, firstShardID, lastShardID;
+const cluster = require('cluster');
 
-// Helper files
-if(require('cluster').isMaster){
-	const global = require('./utils/global.js');
-	const RamCheck = new (require('./utils/ramCheck.js'))(global);
-}
-
-const totalShards = 10;
+let clusters = 60;
 
 (async () => {
-	try{
+	try {
 		//determine how many shards we will need for this manager
-		if (!debug&&require('cluster').isMaster){
+		if (!debug && cluster.isMaster) {
 			result = await request.fetchInit();
 			console.log(result);
-			shards = parseInt(result["shards"]);
-			firstShardID = parseInt(result["firstShardID"]);
-			lastShardID = parseInt(result["lastShardID"]);
+			shards = parseInt(result['shards']);
+			firstShardID = parseInt(result['firstShardID']);
+			lastShardID = parseInt(result['lastShardID']);
 		}
-		// How many clusters we will have
-		var clusters = Math.ceil(shards/totalShards);
-		if(debug){
-			shards = 2;
+		if (debug) {
+			shards = 3;
 			firstShardID = 0;
-			lastShardID = 1;
-			clusters = 2
+			lastShardID = 2;
+			clusters = 2;
 		}
 
-		console.log("Creating shards "+firstShardID+"~"+lastShardID+" out of "+shards+" total shards!");
+		console.log(
+			'Creating shards ' + firstShardID + '~' + lastShardID + ' out of ' + shards + ' total shards!'
+		);
 
 		// Start sharder
-		const sharder = new Sharder("Bot "+auth.token, config.sharder.path, {
+		const sharder = new Sharder('Bot ' + process.env.BOT_TOKEN, config.sharder.path, {
 			name: config.sharder.name,
 			clientOptions: config.eris.clientOptions,
-			debug:true,
-			shards,clusters,
+			debug: true,
+			shards,
+			clusters,
 			firstShardID,
 			lastShardID,
 		});
 
-	}catch(e){
-		console.error("Failed to start eris sharder");
+		if (cluster.isMaster) {
+			rateLimitUtil.init(sharder.bucket, debug);
+		}
+	} catch (e) {
+		console.error('Failed to start eris sharder');
 		console.error(e);
 	}
 })();

@@ -3,7 +3,7 @@
  * Copyright (C) 2019 Christopher Thai
  * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
  * For more information, see README.md and LICENSE
-  */
+ */
 
 const CommandInterface = require('../../CommandInterface.js');
 
@@ -12,55 +12,81 @@ const itemUtil = require('./util/itemUtil.js');
 const lootbox = require('../zoo/lootbox.js');
 const gemUtil = require('../zoo/gemUtil.js');
 const weapon = require('../battle/weapon.js');
-const crate = require('../battle/crate.js');
+//const crate = require('../battle/crate.js');
 
 module.exports = new CommandInterface({
+	alias: ['equip', 'use'],
 
-	alias:["equip","use"],
+	args: '{id}',
 
-	args:"{id}",
+	desc: 'Use items from your inventory!',
 
-	desc:"Use an item from your inventory!",
+	example: ['owo equip 50', 'owo equip 57 71 78', 'owo equip 101'],
 
-	example:["owo equip 2"],
+	related: ['owo inv', 'owo weapon'],
 
-	related:["owo inv","owo weapon"],
+	permissions: ['sendMessages', 'embedLinks', 'attachFiles'],
 
-	permissions:["sendMessages","embedLinks","attachFiles"],
+	group: ['animals'],
 
-	group:["animals"],
+	cooldown: 5000,
+	half: 80,
+	six: 500,
 
-	cooldown:5000,
-	half:80,
-	six:500,
-
-	execute: function(p){
-		let con=p.con,msg=p.msg,args=p.args;
-		let item = shopUtil.getItem(args);
-		if(typeof item === 'string' || item instanceof String){
-			p.send("**🚫 | "+msg.author.username+"**, "+item,3000);
+	execute: function (p) {
+		if (!p.global.isInt(p.args[0]) || p.args[0] > 130) {
+			// arbitrary number higher than inventory ids
+			// pass over to weapon to handle with all args intact
+			weapon.execute(p);
 			return;
-		}else if(!item){
-			p.errorMsg(", I could not find that item",3000);
+		}
+		let itemList = [];
+		for (let i = 0; i < p.args.length; i++) {
+			let item = shopUtil.getItem([p.args[i]]);
+			if (typeof item === 'string' || item instanceof String) {
+				p.send('**🚫 | ' + p.getName() + '**, ' + item, 3000);
+				return;
+			} else if (!item) {
+				p.errorMsg(`, I could not find item ${p.args[i]}`, 3000);
+				return;
+			} else if (i > 0 && item.name != 'gem') {
+				p.errorMsg(', you can only use multiple gems at one time!', 3000);
+				return;
+			}
+			itemList.push(item);
+		}
+		if (itemList.length === 0) {
+			p.errorMsg(', please provide an id of an item to use!', 3000);
 			return;
 		}
 
-		if (item.name == "item") {
+		if (itemList[0].name == 'gem') {
+			gemUtil.use(
+				p,
+				itemList.map((gem) => gem.id)
+			);
+			return;
+		}
+		// first item not a gem, fall back to original logic (ignore other ids provided)
+		let item = itemList[0];
+
+		if (item.name == 'item') {
 			itemUtil.use(item.id, p);
-		} else if(item.name=="lootbox"){
+		} else if (item.name == 'lootbox') {
 			p.args = [];
-      if(item.id == 49) p.args.push('f')
+			if (item.id == 49) p.args.push('f');
 			lootbox.execute(p);
-		}else if(item.name=="gem"){
-			gemUtil.use(p,item.id);
-		}else if(item.name=="crate"){
+			// TODO REMOVE
+			/*
+		} else if (item.name == 'crate') {
 			p.args = [];
 			crate.execute(p);
-		}else if(item.name=="weapon"){
+		*/
+		} else if (item.name == 'weapon') {
+			p.args = [p.args[0]]; // cut off any other junk
 			weapon.execute(p);
-		}else{
-			p.errorMsg(", Could not find that item",3000);
+		} else {
+			p.errorMsg(', Could not find that item', 3000);
 		}
-	}
-
-})
+	},
+});

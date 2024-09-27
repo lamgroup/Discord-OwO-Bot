@@ -1,0 +1,879 @@
+{
+	"valentine": {
+		"start": 1676361600000,
+		"end": 1677139200000,
+		"emoji": "💌",
+		"item": {
+			"id": "love_letter",
+			"name": "Love Letter",
+			"emoji": "💌",
+			"openEmoji": "💌",
+			"chance": 0.05,
+			"foundText": "?emoji? **|** OwO! You found a **love letter**! <3",
+			"description": "Happy Valentines Day! This item was given out on Feb 2023. Open the letter to receive some special stuff!",
+			"rewards": [
+				{
+					"type": "wallpaper",
+					"id": 82,
+					"chance": 25
+				},
+				{
+					"type": "wallpaper",
+					"id": 83,
+					"chance": 25
+				},
+				{
+					"type": "wallpaper",
+					"id": 84,
+					"chance": 25
+				},
+				{
+					"type": "wallpaper",
+					"id": 85,
+					"chance": 25
+				},
+				{
+					"type": "wallpaper",
+					"id": 86,
+					"chance": 10
+				},
+				{
+					"type": "animal",
+					"id": "2023val_day",
+					"chance": 20
+				},
+				{
+					"type": "animal",
+					"id": "2023val_night",
+					"chance": 20
+				},
+				{
+					"type": "lb",
+					"count": 1,
+					"chance": 20
+				},
+				{
+					"type": "wc",
+					"count": 1,
+					"chance": 20
+				},
+				{
+					"type": "flb",
+					"count": 1,
+					"chance": 1
+				}
+			]
+		}
+	},
+	"anniversary1": {
+		"start": 1678435200000,
+		"end": 1679122800000,
+		"emoji": "🎉",
+		"item": {
+			"id": "anniversary_present",
+			"name": "Anniversary Present",
+			"emoji": "<:present:1082490947952201808>",
+			"openEmoji": "<:present:1082490947952201808>",
+			"chance": 0.05,
+			"foundText": "?emoji? **|** OwO! You found a **Anniversary Present**! 🎉",
+			"description": "It's OwO's anniversary! This item was given out on March 2023. Open the present to receive some special stuff!",
+			"rewards": [
+				{
+					"type": "wallpaper",
+					"id": 87,
+					"chance": 20
+				},
+				{
+					"type": "wallpaper",
+					"id": 88,
+					"chance": 20
+				},
+				{
+					"type": "wallpaper",
+					"id": 89,
+					"chance": 20
+				},
+				{
+					"type": "weapon",
+					"id": 18,
+					"chance": 15
+				},
+				{
+					"type": "animal",
+					"id": "2023bday_owo",
+					"chance": 15
+				},
+				{
+					"type": "lb",
+					"count": 1,
+					"chance": 20
+				},
+				{
+					"type": "wc",
+					"count": 1,
+					"chance": 20
+				},
+				{
+					"type": "flb",
+					"count": 1,
+					"chance": 1
+				}
+			]
+		}
+	},
+	"aprilfirst": {
+		"start": 1680332400000,
+		"end": 1681023600000,
+		"emoji": "🐌",
+		"item": {
+			"id": "fake_lootbox",
+			"name": "Fake Lootbox",
+			"emoji": "<:fakelb:1091643848146559008>",
+			"openEmoji": "<:fakelb:1091643848146559008>",
+			"chance": 0.05,
+			"foundText": "?emoji? **|** You found a **Lootbox**...?",
+			"description": "Opens a lootbox! Check how many you have in 'owo inv'!\nApril Fools! This item was given out in April 2023.",
+			"rewards": [
+				{
+					"type": "cowoncy",
+					"count": 1,
+					"chance": 25
+				},
+				{
+					"type": "item",
+					"id": "fake_lootbox",
+					"count": 2,
+					"chance": 25
+				},
+				{
+					"type": "lb",
+					"count": 1,
+					"chance": 25
+				},
+				{
+					"type": "wc",
+					"count": 1,
+					"chance": 25
+				},
+				{
+					"type": "flb",
+					"count": 1,
+					"chance": 1
+				}
+			]
+		}
+	},
+	"3m": {
+		"start": 1684738800000,
+		"end": 1685430000000,
+		"emoji": "🎉",
+		"item": {
+			"id": "3m_present",
+			"name": "3M Present",
+			"emoji": "<:3m_present:1103218140323794954>",
+			"openEmoji": "<:3m_present:1103218140323794954>",
+			"chance": 0.05,
+			"foundText": "?emoji? **|** OwO! You found a **3M Present**! 🎉",
+			"description": "OwO Bot hit 3 million users, it's time to celebrate! This item was given out on May 2023. Open the present to receive some special stuff!",
+			"rewards": [
+				{
+					"type": "gem",
+					"id": 79,
+					"chance": 4
+				},
+				{
+					"type": "gem",
+					"id": 80,
+					"chance": 4
+				},
+				{
+					"type": "gem",
+					"id": 81,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 82,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 83,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 84,
+					"chance": 2
+				},
+				{
+					"type": "gem",
+					"id": 85,
+					"chance": 1
+				},
+				{
+					"type": "wallpaper",
+					"id": 90,
+					"chance": 20
+				},
+				{
+					"type": "weapon",
+					"id": 18,
+					"chance": 20
+				},
+				{
+					"type": "lb",
+					"count": 1,
+					"chance": 10
+				},
+				{
+					"type": "wc",
+					"count": 1,
+					"chance": 10
+				},
+				{
+					"type": "flb",
+					"count": 1,
+					"chance": 1
+				},
+				{
+					"type": "animal",
+					"id": "3m_owo",
+					"chance": 15
+				}
+			]
+		}
+	},
+	"pride_hive": {
+		"start": 1685602800000,
+		"end": 1686898800000,
+		"emoji": "🌈",
+		"item": {
+			"id": "pride_hive",
+			"name": "Pride Hive",
+			"emoji": "<:pridehive:1113710060590346270>",
+			"openEmoji": "<:pridehive:1113710060590346270>",
+			"chance": 0.05,
+			"foundText": "?emoji? **|** You hear a bustling bee hive overhead brimming with activity!",
+			"description": "You hear a bustling bee hive overhead brimming with activity! This item was given out on June 2023 for Pride Month! Open them to greet a bee!",
+			"rewards": [
+				{
+					"type": "gem",
+					"id": 79,
+					"chance": 4
+				},
+				{
+					"type": "gem",
+					"id": 80,
+					"chance": 4
+				},
+				{
+					"type": "gem",
+					"id": 81,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 82,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 83,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 84,
+					"chance": 2
+				},
+				{
+					"type": "gem",
+					"id": 85,
+					"chance": 1
+				},
+				{
+					"type": "lb",
+					"count": 1,
+					"chance": 5
+				},
+				{
+					"type": "wc",
+					"count": 1,
+					"chance": 5
+				},
+				{
+					"type": "flb",
+					"count": 1,
+					"chance": 1
+				},
+				{
+					"type": "bee",
+					"id": "agender",
+					"chance": 8
+				},
+				{
+					"type": "bee",
+					"id": "lesbian",
+					"chance": 8
+				},
+				{
+					"type": "bee",
+					"id": "omnisexual",
+					"chance": 8
+				},
+				{
+					"type": "bee",
+					"id": "pansexual",
+					"chance": 8
+				},
+				{
+					"type": "bee",
+					"id": "transgender",
+					"chance": 8
+				},
+				{
+					"type": "bee",
+					"id": "pride",
+					"chance": 3
+				}
+			]
+		}
+	},
+	"summer_basket": {
+		"start": 1688454000000,
+		"end": 1689231600000,
+		"emoji": "<:basket:1125580957571891230>",
+		"item": {
+			"id": "summer_basket",
+			"name": "Summer Basket",
+			"emoji": "<:basket:1125580957571891230>",
+			"openEmoji": "<:basket:1125580957571891230>",
+			"chance": 0.05,
+			"foundText": "?emoji? **|** Come on, we are going for a picnic! Can you carry the basket?",
+			"description": "Summer is here! Take this basket full of goodies on your picnic! This item was given out on July 2023 for Summer!",
+			"rewards": [
+				{
+					"type": "gem",
+					"id": 79,
+					"chance": 4
+				},
+				{
+					"type": "gem",
+					"id": 80,
+					"chance": 4
+				},
+				{
+					"type": "gem",
+					"id": 81,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 82,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 83,
+					"chance": 3
+				},
+				{
+					"type": "gem",
+					"id": 84,
+					"chance": 2
+				},
+				{
+					"type": "gem",
+					"id": 85,
+					"chance": 1
+				},
+				{
+					"type": "lb",
+					"count": 1,
+					"chance": 10
+				},
+				{
+					"type": "wc",
+					"count": 1,
+					"chance": 10
+				},
+				{
+					"type": "flb",
+					"count": 1,
+					"chance": 1
+				},
+				{
+					"type": "cowoncy",
+					"count": 10000,
+					"chance": 5
+				}
+			]
+		}
+	},
+	"2023_halloween": {
+		"start": 1698735600000,
+		"end": 1699689600000,
+		"type": "halloween",
+		"chance": 0.05
+	},
+	"2023_christmas": {
+		"start": 1703491200000,
+		"end": 1704355200000,
+		"type": "christmas",
+		"chance": 0.05
+	},
+	"2024_valentines": {
+		"start": 1707897600000,
+		"end": 1708588800000,
+		"type": "valentine",
+		"chance": 0.05
+	},
+	"2024_march": {
+		"start": 1710918000000,
+		"end": 1711609200000,
+		"type": "march",
+		"chance": 0.05
+	},
+	"2024_april": {
+		"start": "2024-04-01T00:00:00-0700",
+		"end": "2024-04-10T00:00:00-0700",
+		"type": "april",
+		"chance": 0.05,
+		"rewards": [
+			{
+				"type": "cowoncy",
+				"min": 1000,
+				"max": 5000,
+				"chance": 3,
+				"text": "Eid Mubarak! Happy Eid! Enjoy your holiday! You received **?count? ?emoji? Cowoncies**!",
+				"textEmoji": "🤲"
+			},
+			{
+				"type": "ws",
+				"min": 300,
+				"max": 1000,
+				"chance": 3,
+				"text": "Chocolate? What a nice Eid gift! You received **?count? ?emoji? Weapon Shards** in return!",
+				"textEmoji": "🍫"
+			},
+			{
+				"type": "lb",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "Happy Earth day! You received **?count? ?emoji? ?plural?**",
+				"textEmoji": "🌎"
+			},
+			{
+				"type": "wc",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "Happy Earth day! You received **?count? ?emoji? Weapon ?plural?**",
+				"textEmoji": "🌎"
+			},
+			{
+				"type": "flb",
+				"count": 1,
+				"chance": 1,
+				"text": "Happy Earth day! You received **?count? ?emoji? Fabled ?plural?**!",
+				"textEmoji": "🌎"
+			},
+			{
+				"type": "cookie",
+				"count": 1,
+				"chance": 1,
+				"text": "OwO, what's this? A cup of tea for me? Have a **?emoji? ?plural?** with it!",
+				"textEmoji": "🫖"
+			},
+			{
+				"type": "sgem",
+				"count": 1,
+				"chance": 3,
+				"text": "April Fools! Hope this **?emoji? ?rank? ?type? Gem** brings your luck around!",
+				"textEmoji": "😂"
+			},
+			{
+				"type": "animal",
+				"id": "2024april_fools",
+				"count": 1,
+				"chance": 3,
+				"text": "OwO What's this? The most powerful ?emoji? worm came to join your team!",
+				"textEmoji": "😂"
+			},
+			{
+				"type": "weapon",
+				"id": 22,
+				"count": 1,
+				"chance": 3,
+				"text": "OwO? Hopefully luck is in your favor. Your received **?text?**",
+				"textEmoji": "😂"
+			}
+		]
+	},
+	"2024_may": {
+		"start": "2024-05-23T00:00:00-0700",
+		"end": "2024-06-01T00:00:00-0700",
+		"type": "may",
+		"chance": 0.05,
+		"rewards": [
+			{
+				"type": "cowoncy",
+				"min": 1000,
+				"max": 5000,
+				"chance": 3,
+				"text": "Huh? what's this warm feeling? Oh! It's a hug from momma! Along with a hug, you received **?count? ?emoji? Cowoncies**>!",
+				"textEmoji": "❤️"
+			},
+			{
+				"type": "ws",
+				"min": 300,
+				"max": 1000,
+				"chance": 3,
+				"text": "You used your bike instead of the car to help the polar bears and found **?count? ?emoji? Weapon Shards** in the basket!",
+				"textEmoji": "🐻‍❄️"
+			},
+			{
+				"type": "lb",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "Oh my! Look at those beautiful flowers of spring! Wait... those flowers have something hanging on them?? Oh its a **?count? ?emoji? ?plural?**!",
+				"textEmoji": "🪻"
+			},
+			{
+				"type": "wc",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "OwO signed you up to adopt a rhino! You received **?count? ?emoji? Weapon ?plural?** as a thank you!",
+				"textEmoji": "🦏"
+			},
+			{
+				"type": "flb",
+				"count": 1,
+				"chance": 1,
+				"text": "Oh! You found a golden shield from mom and earned **?count? ?emoji? Fabled ?plural?**!",
+				"textEmoji": "💛"
+			},
+			{
+				"type": "cookie",
+				"count": 1,
+				"chance": 1,
+				"text": "OwO? Is that a mother's love? Strengthened by the might of love, you discovered **?emoji? ?plural?**!",
+				"textEmoji": "💙"
+			},
+			{
+				"type": "sgem",
+				"count": 1,
+				"chance": 3,
+				"text": "OwO? what are these petals falling on us!? Oh spring is here! You tried picking up the petal but found **?emoji? ?rank? ?type? Gem** instead!",
+				"textEmoji": "🌸"
+			},
+			{
+				"type": "weapon",
+				"id": 18,
+				"count": 1,
+				"chance": 3,
+				"text": "You and OwO plant a tree together. What’s this under the leaves? There’s a **?text?**! ",
+				"textEmoji": "🦧"
+			}
+		]
+	},
+	"2024_june": {
+		"start": "2024-06-24T00:00:00",
+		"end": "2024-07-02T00:00:00",
+		"type": "june",
+		"chance": 0.05,
+		"rewards": [
+			{
+				"type": "cowoncy",
+				"min": 1000,
+				"max": 5000,
+				"chance": 3,
+				"text": "OWO! Sharky thinks you are friend and gave you **?count? ?emoji? Cowoncies**!",
+				"textEmoji": "🦈"
+			},
+			{
+				"type": "ws",
+				"min": 300,
+				"max": 1000,
+				"chance": 3,
+				"text": "Aww~ you played with the dolphins. You receive **?count? ?emoji? Weapon Shards** for the entertainment!",
+				"textEmoji": "🐬"
+			},
+			{
+				"type": "lb",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "Oh ho! You went swimming and fought with lobsty. You surprisingly won and gained **?count? ?emoji? ?plural?**!",
+				"textEmoji": "🦞"
+			},
+			{
+				"type": "wc",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "UWU~ do you know milk contains calcium that strengthens your bones? You received **?count? ?emoji? Weapon ?plural?** for reading and knowing!",
+				"textEmoji": "🥛"
+			},
+			{
+				"type": "flb",
+				"count": 1,
+				"chance": 1,
+				"text": "Do you know Boba can be done not only with milk but also soymilk? You have gotten **?count? ?emoji? Fabled ?plural?** for your OWO treat!",
+				"textEmoji": "🧋"
+			},
+			{
+				"type": "cookie",
+				"count": 1,
+				"chance": 1,
+				"text": "Do you add milk into your coffee? Here's a **?emoji? ?plural?** for considering!",
+				"textEmoji": "☕"
+			},
+			{
+				"type": "sgem",
+				"count": 1,
+				"chance": 3,
+				"text": "OwO what's this! A rainbow peeking out of the clouds!? W-wait it just dropped a **?emoji? ?rank? ?type? Gem**!",
+				"textEmoji": "<:hrainbow:1254595698113118270>"
+			}
+		]
+	},
+	"2024_july": {
+		"start": "2024-07-02T00:00:01",
+		"end": "2024-07-10T00:00:00",
+		"type": "july",
+		"chance": 0.05,
+		"animals": [
+			{
+				"animal": "2024july_seal",
+				"minRate": 0.005,
+				"maxRate": 0.05
+			}
+		],
+		"rewards": [
+			{
+				"type": "cowoncy",
+				"min": 1000,
+				"max": 5000,
+				"chance": 3,
+				"text": "Remember to stay cool~ you received **?count? ?emoji? Cowoncies** for keeping cool!",
+				"textEmoji": "🧊"
+			},
+			{
+				"type": "ws",
+				"min": 300,
+				"max": 1000,
+				"chance": 3,
+				"text": "Whose up for a soft serve and **?count? ?emoji? Weapon Shards** to chill off the day? Owo does~",
+				"textEmoji": "🍦"
+			},
+			{
+				"type": "lb",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "UwU? Have you tried to eat snow as ice cream? You receive **?count? ?emoji? ?plural?** for thinking about it",
+				"textEmoji": "❄️"
+			},
+			{
+				"type": "wc",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "UWU~ do you know milk contains calcium that strengthens your bones? You received  for reading and knowing!",
+				"text": "Fireworks are a fantastic way to celebrate! You can celebrate by having **?count? ?emoji? Weapon ?plural?**!",
+				"textEmoji": "🎆"
+			},
+			{
+				"type": "flb",
+				"count": 1,
+				"chance": 1,
+				"text": "While it may not be the festival of snakes, we still appreciate our serpent friends. Here is a **?count? ?emoji? Fabled ?plural?** to remember them!",
+				"textEmoji": "🐍"
+			},
+			{
+				"type": "cookie",
+				"count": 1,
+				"chance": 1,
+				"text": "Do you add milk into your coffee? Here's a  for considering!",
+				"text": "Not all snakes are scary! Some only grow to weigh less than 1 gram! To compensate here is a **?emoji? ?plural?**!",
+				"textEmoji": "🐍"
+			},
+			{
+				"type": "sgem",
+				"count": 1,
+				"chance": 3,
+				"text": "HIIII! i've nevew seen a boww of snakes befowe wow! Quick take these wewawds: **?emoji? ?rank? ?type? Gem** (；ω；)",
+				"textEmoji": "🐍"
+			},
+			{
+				"type": "animal",
+				"id": "2024july_owo",
+				"count": 1,
+				"chance": 3,
+				"text": "OwO, look at the beautiful fireworks! ?emoji? came to join and watch with you <3",
+				"textEmoji": "🎆"
+			}
+		]
+	},
+	"2024_august": {
+		"start": "2024-08-01T00:00:00",
+		"end": "2024-08-09T00:00:00",
+		"type": "august",
+		"chance": 0.05,
+		"animals": [
+			{
+				"animal": "2024aug_maki",
+				"minRate": 0.005,
+				"maxRate": 0.05
+			},
+			{
+				"animal": "2024aug_Krishna",
+				"minRate": 0.005,
+				"maxRate": 0.05
+			},
+			{
+				"animal": "2024aug_cait",
+				"minRate": 0.005,
+				"maxRate": 0.05
+			}
+		],
+		"rewards": [
+			{
+				"type": "cowoncy",
+				"min": 1000,
+				"max": 5000,
+				"chance": 3,
+				"text": "Oh no! A witch turned you into cat! No matter, you received **?count? ?emoji? Cowoncies** as a welcoming treat!",
+				"textEmoji": "🔮 "
+			},
+			{
+				"type": "ws",
+				"min": 300,
+				"max": 1000,
+				"chance": 3,
+				"text": "Nya?! You found me? I shall give you **?count? ?emoji? Weapon Shards** for that feat! Meow~ okie back to sleep... /ᐠ – ﻌ–マ- ᶻ 𝗓 𐰁",
+				"textEmoji": "🐈‍⬛ "
+			},
+			{
+				"type": "lb",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "Strawberry cakie~ OWO likey! Do you? OwO shares **?count? ?emoji? ?plural?** with you!",
+				"textEmoji": "🍰"
+			},
+			{
+				"type": "wc",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "H-hewwo?? Shhh~ UwU has secretly prepared a present for you! (✿ ♡‿♡) You received **?count? ?emoji? Weapon ?plural?** as a gift! ❤️",
+				"textEmoji": "🎂 "
+			},
+			{
+				"type": "flb",
+				"count": 1,
+				"chance": 1,
+				"text": "Yummi yummi treats~ Who's ready for more? Ding You gained a **?count? ?emoji? Fabled ?plural?**!",
+				"textEmoji": "🍩 "
+			},
+			{
+				"type": "cookie",
+				"count": 1,
+				"chance": 1,
+				"text": "Don’t forget to give me treats! ฅ^ >ヮ<^₎  Mew~ Here's a **?emoji? ?plural?** as incentives!",
+				"textEmoji": "🐱"
+			},
+			{
+				"type": "sgem",
+				"count": 1,
+				"chance": 3,
+				"text": "Happy independence day to all the Indians! Oh my- you got a **?emoji? ?rank? ?type? Gem** for celebrating with them!",
+				"textEmoji": "🇮🇳"
+			}
+		]
+	},
+	"2024_sept": {
+		"start": "2024-09-01T00:00:00",
+		"end": "2024-09-09T00:00:00",
+		"type": "september",
+		"chance": 0.05,
+		"animals": [
+			{
+				"animal": "2024sept_hyh",
+				"minRate": 0.005,
+				"maxRate": 0.05
+			},
+			{
+				"animal": "2024sept_nerdturtle",
+				"minRate": 0.005,
+				"maxRate": 0.05
+			},
+			{
+				"animal": "2024sept_vietnam",
+				"minRate": 0.005,
+				"maxRate": 0.05
+			}
+		],
+		"rewards": [
+			{
+				"type": "cowoncy",
+				"min": 1000,
+				"max": 5000,
+				"chance": 3,
+				"text": "A golden retriever named Maximus Mighty-Dog Mueller II served as the second mayor of Idyllwild, waaow! He kept the tennis ball payments, leaving you with **?count? ?emoji? Cowoncies**",
+				"textEmoji": ":tennis:"
+			},
+			{
+				"type": "ws",
+				"min": 300,
+				"max": 1000,
+				"chance": 3,
+				"text": "Raise your flag and watch the parade! Among the people wearing traditional áo dài, you see some colorful floats. Huh? Some look like **?count? ?emoji? Weapon Shards**",
+				"textEmoji": ":flag_vn:"
+			},
+			{
+				"type": "lb",
+				"min": 3,
+				"max": 3,
+				"chance": 3,
+				"text": "It’s very important to get enough sleep to retain what you’ve learnt. Try counting lootboxes, 1.. 2… **?count? ?emoji? ?plural?**!",
+				"textEmoji": ":zzz:"
+			},
+			{
+				"type": "wc",
+				"min": 1,
+				"max": 3,
+				"chance": 3,
+				"text": "While flicking through your revision books, you notice **?count? ?emoji? Weapon ?plural?** between the pages. Bookmark that page!",
+				"textEmoji": ":pencil2:"
+			},
+			{
+				"type": "flb",
+				"count": 1,
+				"chance": 1,
+				"text": "An Akita Inu named Hachikō would return to Shibuya Station every day to await the return of his friend. While waiting **?count? ?emoji? Fabled ?plural?** was left at the station!",
+				"textEmoji": ":dog2:"
+			},
+			{
+				"type": "cookie",
+				"count": 1,
+				"chance": 1,
+				"text": "Don’t forget to take breaks when revising! I heard all the best breaks have snacks, so I brought you a **?emoji? ?plural?**",
+				"textEmoji": ":books:"
+			},
+			{
+				"type": "sgem",
+				"count": 1,
+				"chance": 3,
+				"text": "Try to visit your hometown once in a while, this could be a great opportunity! While seated for dinner, you spot a **?emoji? ?rank? ?type? Gem** on the shelf!",
+				"textEmoji": ":heart:"
+			}
+		]
+	}
+}

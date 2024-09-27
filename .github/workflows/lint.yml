@@ -1,0 +1,39 @@
+name: Lint
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - master
+      - private
+  pull_request:
+    branches:
+      - master
+      - private
+
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.14.0
+
+      # ESLint and Prettier must be in `package.json`
+      - name: Install Node.js dependencies
+        run: rm package.json && mv package-dev.json package.json && npm ci
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          prettier: true
+
+      - name: Run Cyclic Dependency check
+        run: ./node_modules/dpdm/lib/bin/dpdm.js --exit-code circular:1 ./src/owo.js
